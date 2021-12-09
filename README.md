@@ -14,3 +14,6 @@ Team: (un)Lucky 13
  - Music & Documentation: Nate Carpenter
 
  - 3D Modeling & Character Design: Hunter Robertson
+
+
+Each file is commented and explains what it does. 
