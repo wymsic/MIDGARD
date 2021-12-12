@@ -10,6 +10,7 @@ public class LokiQuests : MonoBehaviour
 {
     // MAKE MORE GAMEOBJECTS TO FIT NUMBER OF TEXTS NEEDED
 
+    public GameObject TextBox; 
     public GameObject LokiText;
     public GameObject LokiText2;
     public GameObject LokiText3;
@@ -19,7 +20,6 @@ public class LokiQuests : MonoBehaviour
     public GameObject LokiText7;
     public GameObject LokiText8;
     public GameObject LokiText9;
-    public GameObject LokiText10;
 
 
 
@@ -35,7 +35,7 @@ public class LokiQuests : MonoBehaviour
         {
 
             // copy this function and adjust the values for each text box needed.
-
+            TextBox.SetActive(true);
             //page 1
             if (indexNumber.pageNumber == 0)
             {
@@ -51,7 +51,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText7.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
 
@@ -69,7 +68,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText7.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
             //page 3 ...
@@ -86,7 +84,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText7.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
             //page 4 ...
@@ -103,7 +100,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText7.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
             //page 5 ...
@@ -120,7 +116,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText7.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
             //page 6 ...
@@ -137,7 +132,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText7.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
             //page 7 ...
@@ -154,7 +148,6 @@ public class LokiQuests : MonoBehaviour
                 LokiText6.SetActive(false);
                 LokiText8.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
             //page 8 ...
@@ -171,10 +164,30 @@ public class LokiQuests : MonoBehaviour
                 LokiText6.SetActive(false);
                 LokiText7.SetActive(false);
                 LokiText9.SetActive(false);
-                LokiText10.SetActive(false);
             }
 
+            //page 9 ...
+            if (indexNumber.pageNumber == 8)
+            {
+                LokiText9.SetActive(true);
 
+                //
+                LokiText.SetActive(false);
+                LokiText2.SetActive(false);
+                LokiText3.SetActive(false);
+                LokiText4.SetActive(false);
+                LokiText5.SetActive(false);
+                LokiText6.SetActive(false);
+                LokiText7.SetActive(false);
+                LokiText8.SetActive(false);
+
+            }
+
+            //page 10 ...
+            if (indexNumber.pageNumber == 9)
+            {
+                SceneManager.LoadScene("Credits");
+            }
 
         }
     }
@@ -184,6 +197,8 @@ public class LokiQuests : MonoBehaviour
         if (other.tag == "Player")
         {
             print("Player is leaving Loki Guard");
+            TextBox.SetActive(false);
+
             LokiText.SetActive(false);
             LokiText2.SetActive(false);
             LokiText3.SetActive(false);
@@ -192,6 +207,7 @@ public class LokiQuests : MonoBehaviour
             LokiText6.SetActive(false);
             LokiText7.SetActive(false);
             LokiText8.SetActive(false);
+            LokiText9.SetActive(false);
         }
     }
 }
